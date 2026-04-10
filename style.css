@@ -1,0 +1,205 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Corpo */
+body {
+    background-color: #ecf8a8;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER */
+header {
+    background-color: #1b5e20;
+    text-align: center;
+}
+
+/* LOGO */
+.logo {
+    width: 270px;
+    max-width: 100%; /* 🔥 responsivo */
+    height: auto;
+    object-fit: cover;
+    margin: 10px auto;
+    display: block;
+    transition: 0.3s;
+}
+
+.logo:hover {
+   filter: drop-shadow(0 0 5px #03aa03)
+           drop-shadow(0 0 10px #03aa03) 
+           drop-shadow(0 0 20px #03aa03); 
+}
+
+/* MENU */
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    background-color: #002200;
+    padding: 15px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.menu a:hover {
+    color: #ffd700;
+}
+
+/* BOTÃO MENU MOBILE */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* HOME */
+.home {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+}
+
+.home h1 {
+    font-size: 36px;
+    color: #1b5e20;
+    text-shadow: 0 0 10px #4CAF50;
+    margin-bottom: 10px;
+}
+
+.home p {
+    font-size: 18px;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+/* IMAGEM */
+.img-jogo {
+    width: 100%; /* 🔥 responsivo */
+    max-width: 450px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.img-jogo:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 20px #1b5e20;
+}
+
+/* BOTÃO */
+.botao {
+    background: linear-gradient(45deg, #1b5e20, #4CAF50);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: 0.3s;
+    display: inline-block;
+    margin: 20px auto;
+}
+
+.botao:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #4CAF50;
+}
+
+/* SOBRE */
+.sobre {
+    padding: 20px;
+    text-align: center;
+}
+
+.sobre p {
+    max-width: 800px;
+    margin: 10px auto;
+}
+
+/* CONTATO */
+.contato {
+    padding: 20px;
+    text-align: center;
+}
+
+form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, textarea {
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+}
+
+textarea {
+    height: 120px;
+    resize: none;
+}
+
+button {
+    padding: 12px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+button:hover {
+    background-color: #388e3c;
+}
+
+/* FOOTER */
+footer {
+    margin-top: auto;
+    background-color: #1b5e20;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: #ffd700;
+}
+
+/* 📱 RESPONSIVIDADE */
+@media (max-width: 768px) {
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .home h1 {
+        font-size: 24px;
+    }
+
+    .home p {
+        font-size: 16px;
+    }
+}
