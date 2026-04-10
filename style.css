@@ -119,15 +119,39 @@ header {
     box-shadow: 0 0 15px #4CAF50;
 }
 
-/* SOBRE */
 .sobre {
-    padding: 20px;
+    background-color:#eafa8f;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 25px;
+    border-radius: 12px;
     text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+    
+}
+
+.sobre:hover {
+    transform: scale(1.01);
+}
+
+.sobre h2 {
+    font-size: 32px;
+    color: #1b5e20;
+    margin-bottom: 20px;
+}
+
+.sobre h3 {
+    font-size: 24px;
+    color: #1b5e20;
+    margin-top: 25px;
 }
 
 .sobre p {
-    max-width: 800px;
-    margin: 10px auto;
+    font-size: 18px;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 15px;
 }
 
 /* CONTATO */
@@ -202,7 +226,4 @@ footer {
     .home p {
         font-size: 16px;
     }
-}
-a{
-    color: #002200;
 }

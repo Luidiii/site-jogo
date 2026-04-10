@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aventura no Campo - Contato</title>
+    <title>Contato</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
-    <img src="img/Banner do jogo.png" alt="Banner do jogo" class="logo">
-    
+    <img src="img/Banner do jogo.png" class="logo">
+
     <nav>
         <div class="menu-toggle">☰</div>
+
         <ul class="menu">
             <li><a href="index.html">Home</a></li>
             <li><a href="jogo.html">Jogo</a></li>
@@ -24,18 +25,22 @@
 </header>
 
 <main class="contato">
-    <h1>Entre em Contato</h1>
+
+    <h2>Contato</h2>
 
     <form>
-        <input type="text" placeholder="Seu nome" required>
-        <input type="email" placeholder="Seu e-mail" required>
-        <textarea placeholder="Sua mensagem" required></textarea>
+        <input type="text" id="nome" placeholder="Seu nome">
+        <input type="email" id="email" placeholder="Seu email">
+        <textarea id="mensagem" placeholder="Sua mensagem"></textarea>
         <button type="submit">Enviar</button>
     </form>
+
+    <p id="status"></p>
+
 </main>
 
 <footer>
-    <p>©️ 2026 - Criado por Luiz Felipe da Silva | Todos os direitos reservados</p>
+    <p>© 2026 - Criado por Luiz Felipe da Silva</p>
 </footer>
 
 <script src="script.js"></script>
