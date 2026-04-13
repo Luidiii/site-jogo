@@ -15,6 +15,7 @@ body {
 header {
     background-color: #1b5e20;
     text-align: center;
+    z-index: 10;
 }
 
 .logo {
@@ -57,6 +58,7 @@ header {
     padding: 10px;
 }
 
+/* --- SEÇÃO HOME --- */
 .home {
     max-width: 800px;
     margin: 0 auto;
@@ -86,8 +88,14 @@ header {
     text-decoration: none;
     display: inline-block;
     margin: 20px auto;
+    transition: 0.3s;
 }
 
+.botao:hover {
+    transform: scale(1.05);
+}
+
+/* --- SEÇÃO SOBRE --- */
 .sobre {
     background-color:#eafa8f;
     max-width: 900px;
@@ -95,8 +103,10 @@ header {
     padding: 25px;
     border-radius: 12px;
     text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
+/* --- SEÇÃO CONTATO --- */
 .contato {
     padding: 20px;
     text-align: center;
@@ -113,6 +123,8 @@ form {
 input, textarea {
     padding: 10px;
     width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 button {
@@ -124,16 +136,10 @@ button {
     cursor: pointer;
 }
 
-footer {
-    margin-top: auto;
-    background-color: #1b5e20;
-    text-align: center;
-    padding: 20px;
-    color: #ffd700;
-}
-
+/* --- PÁGINA DO JOGO (TRAVA E CENTRALIZAÇÃO) --- */
 .pagina-do-jogo {
-    overflow: hidden;
+    overflow: hidden !important;
+    height: 100vh !important;
 }
 
 .jogo {
@@ -141,20 +147,42 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    width: 100%;
+    padding: 10px;
+}
+
+.container-jogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
 
 iframe {
+    width: 800px;
+    height: 600px;
+    max-width: 95vw;
+    max-height: 70vh;
     border: 5px solid #1b5e20;
     border-radius: 10px;
-    background: #000;
-    max-width: 100%;
+    background-color: #000;
 }
 
+/* --- RODAPÉ --- */
+footer {
+    background-color: #1b5e20;
+    text-align: center;
+    padding: 15px;
+    color: #ffd700;
+}
+
+/* --- MOBILE --- */
 @media (max-width: 768px) {
     .menu {
         display: none;
         flex-direction: column;
+        gap: 10px;
     }
     .menu.active {
         display: flex;
