@@ -132,16 +132,12 @@ button {
     cursor: pointer;
 }
 
-.pagina-do-jogo {
-    overflow-y: auto;
-}
-
 .jogo {
     flex: 1;
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 40px 10px;
+    align-items: flex-start;
+    padding: 50px 10px;
 }
 
 .container-jogo {
@@ -154,7 +150,6 @@ button {
 iframe {
     width: 800px;
     height: 600px;
-    max-width: 95vw;
     border: 5px solid #1b5e20;
     border-radius: 10px;
     background-color: #000;
@@ -167,7 +162,11 @@ footer {
     color: #ffd700;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 850px) {
+    iframe {
+        width: 95vw;
+        height: 70vw;
+    }
     .menu {
         display: none;
         flex-direction: column;
