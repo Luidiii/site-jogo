@@ -21,14 +21,13 @@ header {
     width: 270px;
     max-width: 100%;
     height: auto;
-    object-fit: cover;
     margin: 10px auto;
     display: block;
     transition: 0.3s;
 }
 
 .logo:hover {
-    filter: drop-shadow(0 0 5px #03aa03) drop-shadow(0 0 10px #03aa03) drop-shadow(0 0 20px #03aa03); 
+    filter: drop-shadow(0 0 10px #03aa03);
 }
 
 .menu {
@@ -68,14 +67,7 @@ header {
 .home h1 {
     font-size: 36px;
     color: #1b5e20;
-    text-shadow: 0 0 10px #4CAF50;
     margin-bottom: 10px;
-}
-
-.home p {
-    font-size: 18px;
-    color: #444;
-    margin-bottom: 20px;
 }
 
 .img-jogo {
@@ -84,12 +76,6 @@ header {
     display: block;
     margin: 20px auto;
     border-radius: 15px;
-    transition: 0.3s;
-}
-
-.img-jogo:hover {
-    transform: scale(1.03);
-    box-shadow: 0 0 20px #1b5e20;
 }
 
 .botao {
@@ -98,14 +84,8 @@ header {
     padding: 12px 25px;
     border-radius: 12px;
     text-decoration: none;
-    transition: 0.3s;
     display: inline-block;
     margin: 20px auto;
-}
-
-.botao:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 15px #4CAF50;
 }
 
 .sobre {
@@ -115,27 +95,6 @@ header {
     padding: 25px;
     border-radius: 12px;
     text-align: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: 0.3s;
-}
-
-.sobre h2 {
-    font-size: 32px;
-    color: #1b5e20;
-    margin-bottom: 20px;
-}
-
-.sobre h3 {
-    font-size: 24px;
-    color: #1b5e20;
-    margin-top: 25px;
-}
-
-.sobre p {
-    font-size: 18px;
-    color: #444;
-    line-height: 1.6;
-    margin-bottom: 15px;
 }
 
 .contato {
@@ -153,7 +112,6 @@ form {
 
 input, textarea {
     padding: 10px;
-    font-size: 16px;
     width: 100%;
 }
 
@@ -162,8 +120,8 @@ button {
     background-color: #4caf50;
     color: white;
     border: none;
-    cursor: pointer;
     border-radius: 8px;
+    cursor: pointer;
 }
 
 footer {
@@ -171,13 +129,11 @@ footer {
     background-color: #1b5e20;
     text-align: center;
     padding: 20px;
-    font-size: 0.9rem;
     color: #ffd700;
 }
 
 .pagina-do-jogo {
     overflow: hidden;
-    height: 100vh;
 }
 
 .jogo {
@@ -185,14 +141,14 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding: 20px;
 }
 
 iframe {
-    border: 4px solid #1b5e20;
+    border: 5px solid #1b5e20;
     border-radius: 10px;
+    background: #000;
     max-width: 100%;
-    max-height: 70vh;
 }
 
 @media (max-width: 768px) {
