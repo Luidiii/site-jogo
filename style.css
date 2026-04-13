@@ -15,7 +15,6 @@ body {
 header {
     background-color: #1b5e20;
     text-align: center;
-    z-index: 10;
 }
 
 .logo {
@@ -58,7 +57,6 @@ header {
     padding: 10px;
 }
 
-/* --- SEÇÃO HOME --- */
 .home {
     max-width: 800px;
     margin: 0 auto;
@@ -95,7 +93,6 @@ header {
     transform: scale(1.05);
 }
 
-/* --- SEÇÃO SOBRE --- */
 .sobre {
     background-color:#eafa8f;
     max-width: 900px;
@@ -106,7 +103,6 @@ header {
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-/* --- SEÇÃO CONTATO --- */
 .contato {
     padding: 20px;
     text-align: center;
@@ -136,10 +132,8 @@ button {
     cursor: pointer;
 }
 
-/* --- PÁGINA DO JOGO (TRAVA E CENTRALIZAÇÃO) --- */
 .pagina-do-jogo {
-    overflow: hidden !important;
-    height: 100vh !important;
+    overflow-y: auto;
 }
 
 .jogo {
@@ -147,8 +141,7 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    padding: 10px;
+    padding: 40px 10px;
 }
 
 .container-jogo {
@@ -156,20 +149,17 @@ button {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100%;
 }
 
 iframe {
     width: 800px;
     height: 600px;
     max-width: 95vw;
-    max-height: 70vh;
     border: 5px solid #1b5e20;
     border-radius: 10px;
     background-color: #000;
 }
 
-/* --- RODAPÉ --- */
 footer {
     background-color: #1b5e20;
     text-align: center;
@@ -177,7 +167,6 @@ footer {
     color: #ffd700;
 }
 
-/* --- MOBILE --- */
 @media (max-width: 768px) {
     .menu {
         display: none;

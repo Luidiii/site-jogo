@@ -1,4 +1,3 @@
-
 const toggle = document.querySelector('.menu-toggle');
 const menu = document.querySelector('.menu');
 
@@ -15,6 +14,15 @@ if (toggle && menu) {
     });
 }
 
+const botao = document.querySelector('.botao');
+if (botao) {
+    botao.addEventListener('click', () => {
+        botao.style.transform = "scale(0.95)";
+        setTimeout(() => {
+            botao.style.transform = "scale(1)";
+        }, 150);
+    });
+}
 
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.querySelector("form");
@@ -37,18 +45,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-
 const chavesProibidas = ["Space", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"];
 
 window.addEventListener("keydown", function(e) {
     if (chavesProibidas.indexOf(e.code) > -1) {
-        // Bloqueia o scroll se não estiver digitando em um campo de texto
         if (document.activeElement.tagName !== "INPUT" && document.activeElement.tagName !== "TEXTAREA") {
             e.preventDefault();
         }
     }
 }, { passive: false });
-
 
 const focarJogo = () => {
     const iframe = document.querySelector('iframe');
@@ -57,7 +62,5 @@ const focarJogo = () => {
     }
 };
 
-
 window.addEventListener('load', focarJogo);
 document.addEventListener('click', focarJogo);
-setInterval(focarJogo, 2000);
