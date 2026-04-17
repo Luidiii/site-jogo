@@ -10,7 +10,10 @@
 <body>
 
 <header>
-    <img src="img/Banner do jogo.png" class="logo">
+
+    <div class="container">
+        <img src="img/Banner do jogo.png" class="logo">
+    </div>
 
     <nav>
         <div class="menu-toggle">☰</div>
@@ -21,26 +24,37 @@
             <li><a href="sobre.html">Sobre</a></li>
             <li><a href="contato.html">Contato</a></li>
         </ul>
+
     </nav>
+
 </header>
 
 <main class="home">
+    <div class="container">
 
-    <h1>Bem vindo ao jogo Aventura no Campo</h1>
+        <h1>Bem vindo ao jogo Aventura no Campo</h1>
 
-    <div class="conteudo-lado">
+        <div class="saudacao">
+            <input type="text" id="nome" placeholder="Digite seu nome">
+            <button onclick="saudar()">Entrar</button>
 
-        <img src="img/Imagem do jogo.jpeg" alt="Imagem do jogo" class="img-jogo">
+            <p id="mensagem"></p>
+        </div>
 
-        <div class="texto-lado">
-            <p>Explore o campo e viva uma grande aventura.</p>
-            <p>Descubra desafios, caminhos e supere obstáculos ao longo da jornada.</p>
+        <div class="conteudo-lado">
+
+            <img src="img/Imagem do jogo.jpeg" class="img-jogo">
+
+            <div class="texto-lado">
+                <p>Explore o campo e viva uma grande aventura.</p>
+                <p>Descubra desafios, caminhos e supere obstáculos ao longo da jornada.</p>
+
+                <a href="jogo.html" class="botao">Jogar Agora</a>
+            </div>
+
         </div>
 
     </div>
-
-    <a href="jogo.html" class="botao">Jogar Agora</a>
-
 </main>
 
 <footer>

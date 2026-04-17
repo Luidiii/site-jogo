@@ -1,3 +1,4 @@
+/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -5,33 +6,62 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* modo claro padrão */
+:root {
+    --bg: #ecf8a8;
+    --text: #000;
+    --card: #ffffff;
+    --header: #1b5e20;
+    --menu: #002200;
+    --button1: #1b5e20;
+    --button2: #4CAF50;
+}
+
+/* md escuro */
+body.dark {
+    --bg: #121212;
+    --text: #eaeaea;
+    --card: #1e1e1e;
+    --header: #000;
+    --menu: #1a1a1a;
+    --button1: #333;
+    --button2: #555;
+}
+
 body {
-    background-color: #ecf8a8;
+    background-color: var(--bg);
+    color: var(--text);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     overflow-y: auto;
 }
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
 header {
-    background-color: #1b5e20;
-    text-align: center;
+    background-color: var(--header);
+    padding: 5px 0;
 }
 
 .logo {
-    width: 270px;
-    max-width: 100%;
-    height: auto;
-    margin: 10px auto;
+    width: 200px;
     display: block;
+    margin: 0 auto;
 }
 
+/* menu normal */
 .menu {
+    width: 100%;
     list-style: none;
     display: flex;
     justify-content: center;
     gap: 40px;
-    background-color: #002200;
+    background-color: var(--menu);
     padding: 15px;
 }
 
@@ -41,67 +71,145 @@ header {
     font-size: 18px;
 }
 
+/* menu pra cll*/
 .menu-toggle {
     display: none;
     font-size: 28px;
     color: white;
     cursor: pointer;
     padding: 10px;
-}
-
-.home, .sobre, .contato {
-    max-width: 900px;
-    margin: 20px auto;
-    padding: 20px;
     text-align: center;
 }
 
+.home, .sobre, .contato {
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* LAYOUT HOME */
+.conteudo-lado {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+
+.img-jogo {
+    width: 100%;
+    max-width: 600px;
+}
+
+.texto-lado {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: var(--card);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+    color: var(--text);
+}
+
+/* botão de jogar */
 .botao {
-    background: linear-gradient(45deg, #1b5e20, #4CAF50);
+    background: linear-gradient(45deg, var(--button1), var(--button2));
     color: white;
     padding: 12px 25px;
     border-radius: 12px;
     text-decoration: none;
     display: inline-block;
-    margin: 20px auto;
+    width: fit-content;
 }
 
-/* FOCO AQUI: TAMANHO DO JOGO */
+/* jogo */
 .jogo {
-    width: 100%;
-    padding: 40px 0;
+    flex: 1;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
-iframe {
-    width: 800px !important;
-    height: 600px !important;
+.container-jogo iframe {
+    width: 800px;
+    height: 600px;
     border: 5px solid #1b5e20;
     border-radius: 10px;
     background-color: #000;
 }
 
+/* caixinha de tras do sobre */
+.card-sobre {
+    background: var(--card);
+    padding: 20px;
+    border-radius: 15px;
+    margin: 15px 0;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    background: var(--card);
+    color: var(--text);
+}
+
+form textarea {
+    resize: none;
+    height: 120px;
+}
+
+form button {
+    background: linear-gradient(45deg, var(--button1), var(--button2));
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* rodapé */
 footer {
-    background-color: #1b5e20;
+    background-color: var(--header);
     text-align: center;
     padding: 20px;
-    color: #ffd700;
+    color: gold;
     margin-top: auto;
 }
 
+/* MOBILE */
 @media (max-width: 850px) {
-    iframe {
-        width: 95vw !important;
-        height: 70vw !important;
+    .container-jogo iframe {
+        width: 95vw;
+        height: 70vw;
     }
+
     .menu {
         display: none;
         flex-direction: column;
     }
+
     .menu.active {
         display: flex;
     }
+
     .menu-toggle {
         display: block;
     }

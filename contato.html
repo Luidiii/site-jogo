@@ -10,7 +10,10 @@
 <body>
 
 <header>
-    <img src="img/Banner do jogo.png" class="logo">
+
+    <div class="container">
+        <img src="img/Banner do jogo.png" class="logo">
+    </div>
 
     <nav>
         <div class="menu-toggle">☰</div>
@@ -21,22 +24,26 @@
             <li><a href="sobre.html">Sobre</a></li>
             <li><a href="contato.html">Contato</a></li>
         </ul>
+
     </nav>
+
 </header>
 
 <main class="contato">
+    <div class="container">
 
-    <h2>Contato</h2>
+        <h2>Contato</h2>
 
-    <form>
-        <input type="text" id="nome" placeholder="Seu nome">
-        <input type="email" id="email" placeholder="Seu email">
-        <textarea id="mensagem" placeholder="Sua mensagem"></textarea>
-        <button type="submit">Enviar</button>
-    </form>
+        <form>
+            <input type="text" id="nome" placeholder="Seu nome" required>
+            <input type="email" id="email" placeholder="Seu email" required>
+            <textarea id="mensagem" placeholder="Sua mensagem" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
 
-    <p id="status"></p>
+        <p id="status"></p>
 
+    </div>
 </main>
 
 <footer>

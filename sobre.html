@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre - Aventura no Campo</title>
+    <title>Sobre</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
-    <img src="img/Banner do jogo.png" alt="Banner do jogo" class="logo">
-    
+    <div class="container">
+        <img src="img/Banner do jogo.png" class="logo">
+    </div>
+
     <nav>
         <div class="menu-toggle">☰</div>
-        
         <ul class="menu">
             <li><a href="index.html">Home</a></li>
             <li><a href="jogo.html">Jogo</a></li>
@@ -25,37 +26,33 @@
 </header>
 
 <main class="sobre">
+    <div class="container">
 
-    <h2> Sobre o Jogo</h2>
+        <h2>Sobre o Jogo</h2>
 
-    <p>
-        <strong>Aventura no Campo</strong> é um jogo de aventura ambientado em um cenário rural,
-        onde o jogador explora o campo e enfrenta desafios ao longo da jornada.
-    </p>
+        <div class="card-sobre">
+            <p>
+                Aventura no Campo é um jogo onde o jogador explora um ambiente rural
+                cheio de desafios e obstáculos.
+            </p>
+        </div>
 
-    <p>
-        O objetivo é explorar o mapa, encontrar caminhos e superar obstáculos até completar a aventura.
-    </p>
+        <h3>Informações do Jogo</h3>
 
-    <h3> Persona</h3>
+        <div class="card-sobre">
+            <p id="info-jogo"></p>
+        </div>
 
-    <p>
-        Nome: Lucas Andrade<br>
-        Idade: 14 anos<br>
-        Perfil: Gosta de jogos de aventura e exploração.
-    </p>
+        <h3>Como Jogar</h3>
+        <div class="card-sobre">
+            <p>Use as setas do teclado para movimentar o personagem.</p>
+        </div>
 
-    <h3> História do Personagem</h3>
-
-    <p>
-        Lucas é um jovem aventureiro que cresceu no campo, sempre curioso e explorador.
-        Ele decide embarcar em uma jornada cheia de desafios, aprendendo sobre coragem e superação.
-    </p>
-
+    </div>
 </main>
 
 <footer>
-    <p>©️ 2026 - Criado por Luiz Felipe da Silva | Todos os direitos reservados</p>
+    <p>© 2026 - Criado por Luiz Felipe da Silva</p>
 </footer>
 
 <script src="script.js"></script>
